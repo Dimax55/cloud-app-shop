@@ -9,7 +9,7 @@ pipeline {
         }
         stage('----build image----') {
             steps {
-                sh 'docker build -t my-front /var/lib/jenkins/workspace/aws-clone]'
+                sh 'sudo docker build -t my-front /var/lib/jenkins/workspace/aws-clone]'
             }
         }
         stage('-----checking created image-------') {
