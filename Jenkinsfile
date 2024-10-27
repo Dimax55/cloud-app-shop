@@ -7,14 +7,20 @@ pipeline {
                 echo 'Hello World'
             }
         }
-        stage('shell1') {
+        stage('----build image----') {
             steps {
-                sh 'ls /etc/'
+                sh 'docker build -t my-front .'
             }
         }
-        stage('SH') {
+        stage('-----checking created image-------') {
             steps {
-                sh 'ls /home/'
+                sh 'docker images'
+                sh 'docker imahes | grep my-front'
+            }
+        }
+        stage('-----start container----------') {
+            steps {
+                sh 'docker run -d -p 80:80 my-front'
             }
         }
     }
