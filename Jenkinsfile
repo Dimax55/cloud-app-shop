@@ -15,7 +15,7 @@ pipeline {
         stage('-----checking created image-------') {
             steps {
                 sh 'docker images'
-                sh 'docker imahes | grep my-front'
+                sh 'docker images'
             }
         }
         stage('-----start container----------') {
