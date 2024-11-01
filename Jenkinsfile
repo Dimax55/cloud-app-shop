@@ -9,7 +9,7 @@ pipeline {
         }
         stage('-----create docker network-------') {
             steps {
-                #sh 'docker network rm my_network'
+                sh 'docker network rm my_network'
                 sh 'docker network create my_network'
                 sh 'docker network ls'
             }
