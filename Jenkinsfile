@@ -102,8 +102,7 @@ pipeline {
 
         stage("docker push") {
             steps {
-                echo " ============== pushing image =================="
-                sh '''
+                sh 'echo " ============== pushing image =================="'
                 // Відправлення образів на Docker Hub
                 //docker push your_dockerhub_username/my-front:latest
                 //docker push your_dockerhub_username/my-back:latest
