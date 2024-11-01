@@ -9,9 +9,9 @@ pipeline {
         }
         stage('-----cstopping all----------') {
             steps {
-                sh 'docker stop a4d7af8e67f0'
-                sh 'docker stop 5a7846c0ff99'
-                sh 'docker stop d05153d96915'
+                sh 'sudo docker stop a4d7af8e67f0'
+                sh 'sudo docker stop 5a7846c0ff99'
+                sh 'sudo docker stop d05153d96915'
             }
         }
         stage('-----create docker network-------') {
