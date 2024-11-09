@@ -55,31 +55,31 @@ pipeline {
                 sh 'docker images'
             }
         }
-        /*stage('-----start container----------') {
+        stage('-----start container----------') {
             steps {
                 sh 'docker run --network my_network -d -p 81:80 my-front'
             }
         }
-        */
-        /*
+        
+        
         stage('-----start database image----------') {
             steps {
                 sh 'docker run --network my_network -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=Qwerty-1" -p 1433:1433 --name sql111 --hostname sql1 -d mcr.microsoft.com/mssql/server:2022-latest'
             }
         }
-        */
+        
         stage('-----build back image----------') {
             steps {
                 sh 'sudo docker build -t my-back /var/lib/jenkins/workspace/aws-clone/BackEnd/Amazon-clone'
             }
         }
-        /*
+        
         stage('-----start back container----------') {
             steps {
                 sh 'docker run --network my_network -d -p 5034 my-back'
             }
         }
-        */
+        
         stage('-----chacking----------') {
             steps {
                 sh 'docker ps'
