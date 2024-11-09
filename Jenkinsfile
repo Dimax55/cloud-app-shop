@@ -57,7 +57,7 @@ pipeline {
         }
         /*stage('-----start container----------') {
             steps {
-                sh 'docker run --network my_network -d -p 80:80 my-front'
+                sh 'docker run --network my_network -d -p 81:80 my-front'
             }
         }
         */
